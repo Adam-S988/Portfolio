@@ -1,0 +1,19 @@
+.greyBox {
+  padding: 20px;
+}
+
+.breedSection {
+  margin: 20px 0;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#imageGallery img {
+  max-width: 100%;
+  height: auto;
+  margin: 5px;
+}

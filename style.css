@@ -127,8 +127,8 @@ nav {
 }
 
 .nav-content {
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center links horizontally */
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -211,7 +211,8 @@ a.list:hover {
   padding-left: 20px;
 }
 
-#rps {
+#rps,
+#dog {
   width: 80px;
 }
 
