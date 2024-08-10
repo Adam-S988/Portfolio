@@ -16,15 +16,6 @@ const populateBreedOptions = async () => {
       breedOption.value = capitalize(breed);
       breedOption.textContent = capitalize(breed);
       breedSelect.appendChild(breedOption);
-
-      breeds[breed].forEach((subBreed) => {
-        const subBreedOption = document.createElement("option");
-        subBreedOption.value = `${capitalize(breed)} (${capitalize(subBreed)})`;
-        subBreedOption.textContent = `${capitalize(breed)} (${capitalize(
-          subBreed
-        )})`;
-        breedSelect.appendChild(subBreedOption);
-      });
     }
   } catch (error) {
     console.error("Error fetching breeds:", error);
