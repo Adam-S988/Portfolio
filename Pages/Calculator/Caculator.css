@@ -112,10 +112,3 @@ button:active {
 a {
   font-size: 24px;
 }
-
-h1 {
-  padding-top: 45px;
-  font-size: 3.5rem;
-  color: hsl(0, 0%, 20%);
-  border-bottom: 1px solid black;
-}

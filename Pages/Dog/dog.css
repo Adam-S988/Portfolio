@@ -1,3 +1,7 @@
+main {
+  padding-bottom: 100px;
+}
+
 .greyBox {
   padding: 20px;
 }
@@ -13,7 +17,17 @@
 }
 
 #imageGallery img {
-  max-width: 100%;
-  height: auto;
+  max-width: 150px;
+  height: 150px;
   margin: 5px;
+  border: 1px solid black;
+  border-radius: 15px;
+  transition: 1s;
+}
+
+#imageGallery img:hover {
+  max-width: 200px;
+  height: 200px;
+  margin: 5px;
+  transition: 1s;
 }
