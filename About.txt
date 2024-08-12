@@ -1,0 +1,3 @@
+Author: Adam Stevenson
+Date: August 1 - 12, 2024
+Purpose: Website dedicated to showing various projects I have worked on.
