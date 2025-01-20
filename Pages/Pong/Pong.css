@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #fdf5e6;
+  background-color: #0b0041;
   margin: 0;
   padding: 0;
   display: flex;
@@ -30,14 +30,14 @@ canvas {
 
 p {
   font-size: 18px;
-  color: #333;
+  color: white;
   margin-top: 20px;
 }
 
 nav {
-  background-color: #deb887;
+  background-color: #8e909c8e;
   padding: 15px;
-  border-bottom: 2px solid hsl(34, 64%, 62%);
+  border-bottom: 2px solid black;
   width: 100%;
   position: fixed;
   top: 0;
@@ -57,7 +57,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: darkslategrey;
+  color: rgb(194, 230, 230);
   margin: 0 15px;
   position: relative;
   padding: 5px 10px;
@@ -74,7 +74,7 @@ nav a::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(218, 149, 59);
+  background-color: #0a209a8e;
   border-radius: 10px;
   transform: scale(0);
   transform-origin: center;
@@ -92,7 +92,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #deb887;
+  background: #8e909c8e;
   padding: 10px 30px;
   position: fixed;
   bottom: 0;
@@ -100,7 +100,7 @@ footer {
   right: 0;
   width: 100%;
   z-index: 1000;
-  border-top: 2px solid hsl(34, 64%, 62%);
+  border-top: 2px solid black;
 }
 
 footer a {
@@ -116,7 +116,7 @@ footer a {
 
 footer a:hover {
   transform: scale(1.2);
-  background-color: #f0e68c;
+  background-color: rgb(194, 230, 230);
 }
 
 footer img {

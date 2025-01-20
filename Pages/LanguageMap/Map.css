@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: blanchedalmond;
+  background-color: #0b0041;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -14,12 +14,13 @@ body {
 h1 {
   text-align: center;
   font-size: 300%;
+  color: white;
 }
 
 nav {
-  background-color: #deb887;
+  background-color: #8e909c8e;
   padding: 15px;
-  border-bottom: 2px solid hsl(34, 64%, 62%);
+  border-bottom: 2px solid black;
   width: 100%;
   position: fixed;
   top: 0;
@@ -39,7 +40,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: darkslategrey;
+  color: rgb(194, 230, 230);
   margin: 0 15px;
   position: relative;
   padding: 5px 10px;
@@ -56,7 +57,7 @@ nav a::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(218, 149, 59);
+  background-color: #0a209a8e;
   border-radius: 10px;
   transform: scale(0);
   transform-origin: center;
@@ -74,7 +75,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #deb887;
+  background: #8e909c8e;
   padding: 10px 30px;
   position: fixed;
   bottom: 0;
@@ -82,7 +83,7 @@ footer {
   right: 0;
   width: 100%;
   z-index: 1000;
-  border-top: 2px solid hsl(34, 64%, 62%);
+  border-top: 2px solid black;
 }
 
 footer a {
@@ -98,7 +99,7 @@ footer a {
 
 footer a:hover {
   transform: scale(1.2);
-  background-color: #f0e68c;
+  background-color: rgb(194, 230, 230);
 }
 
 footer img {
@@ -109,6 +110,7 @@ footer img {
 #controls {
   margin: 20px;
   text-align: center;
+  color: white;
 }
 
 #timeSlider {
@@ -163,7 +165,7 @@ footer img {
 #yearLabel {
   font-size: 1.2em;
   font-weight: bold;
-  color: #34495e;
+  color: #7eb4e9;
   margin-left: 10px;
 }
 
@@ -182,7 +184,7 @@ footer img {
   flex-direction: column; /* Stack buttons vertically */
   align-items: center; /* Center-align buttons */
   background-color: hsla(207, 44%, 49%, 0.648); /* Muted blue background */
-  border: 1px black solid; /* Black border */
+  border: 1px solid #ddd;
   border-radius: 10px; /* Rounded corners */
   width: 150px; /* Fixed width */
   padding: 10px; /* Add space inside the legend */
@@ -201,7 +203,8 @@ footer img {
 }
 
 #languageDetails p {
-  margin-bottom: 10px; /* Optional: Adds spacing between sections */
+  color: white;
+  margin-bottom: 10px;
 }
 
 /* Buttons Inside Legend */
@@ -228,7 +231,7 @@ footer img {
 #languageDetails {
   width: 80%;
   background-color: hsla(207, 44%, 40%, 0.8);
-  border: 1px black solid;
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 15px;
   text-align: left;

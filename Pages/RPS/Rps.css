@@ -1,5 +1,5 @@
 body {
-  background-color: #fdf5e6;
+  background-color: #0b0041;
   text-align: center;
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -8,7 +8,7 @@ body {
 
 h1 {
   font-size: 3.5rem;
-  color: hsl(0, 0%, 20%);
+  color: white;
   border-bottom: 1px solid black;
 }
 
@@ -35,7 +35,7 @@ main {
 }
 
 .allDisplay {
-  background-color: burlywood;
+  background-color: rgb(194, 230, 230);
   padding: 20px;
   border: 1px solid black;
   border-radius: 20px;
@@ -68,6 +68,7 @@ a {
 
 #playerDisplay,
 #computerDisplay {
+  color: white;
   font-size: 2.5rem;
 }
 
