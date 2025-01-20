@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historical Language Map</title>
+    <link rel="stylesheet" href="Map.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <h1>Languages of Europe over the Ages</h1>
+    <div id="map-legend-container">
+      <div id="legend" class="shared-box">
+        <h2>Legend</h2>
+        <button id="Celtic" data-language-family="Celtic">Celtic</button>
+        <button id="Germanic" data-language-family="Germanic">Germanic</button>
+        <button id="Italic" data-language-family="Italic">Italic</button>
+        <button id="Baltic" data-language-family="Baltic">Baltic</button>
+        <button id="Slavic" data-language-family="Slavic">Slavic</button>
+        <button id="Anatolian" data-language-family="Anatolian">
+          Anatolian
+        </button>
+        <button id="Hellenic" data-language-family="Hellenic">Hellenic</button>
+        <button id="Lusitanian" data-language-family="Lusitanian">
+          Lusitanian
+        </button>
+        <button id="Uralic" data-language-family="Uralic">Uralic</button>
+        <button id="PaleoEuropean" data-language-family="PaleoEuropean">
+          Paleo-European
+        </button>
+      </div>
+      <div id="map" style="height: 500px"></div>
+    </div>
+
+    <div id="controls">
+      <label for="timeSlider">Year: <span id="yearLabel">2500 BC</span></label>
+      <input type="range" id="timeSlider" min="1" max="5" value="1" step="1" />
+      <button id="playButton">Play</button>
+    </div>
+
+    <div id="languageDetails" class="shared-box">Language Details</div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="Map.js"></script>
+  </body>
+</html>
