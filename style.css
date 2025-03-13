@@ -238,6 +238,10 @@ a.list:hover {
   width: 180px;
 }
 
+#aboutPic {
+  margin-right: 15px;
+}
+
 header {
   margin-top: 70px;
 }
