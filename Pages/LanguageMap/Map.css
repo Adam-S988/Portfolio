@@ -181,13 +181,13 @@ footer img {
 /* Legend Box */
 #legend {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  align-items: center; /* Center-align buttons */
-  background-color: hsla(207, 44%, 49%, 0.648); /* Muted blue background */
+  flex-direction: column;
+  align-items: center;
+  background-color: hsla(207, 44%, 49%, 0.648);
   border: 1px solid #ddd;
-  border-radius: 10px; /* Rounded corners */
-  width: 150px; /* Fixed width */
-  padding: 10px; /* Add space inside the legend */
+  border-radius: 10px;
+  width: 150px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -209,16 +209,16 @@ footer img {
 
 /* Buttons Inside Legend */
 #legend button {
-  display: block; /* Stack buttons */
-  width: 100%; /* Full width of the legend box */
-  padding: 10px; /* Add spacing inside buttons */
-  background: none; /* Remove button background */
-  border: none; /* Remove button border */
-  text-align: center; /* Center-align text */
-  cursor: pointer; /* Pointer cursor on hover */
-  color: inherit; /* Use color from language-specific styles */
-  font-size: 1rem; /* Adjust font size if needed */
-  transition: transform 0.3s ease; /* Smooth transform effect */
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
 }
 
 /* Buttons Hover Effect */
