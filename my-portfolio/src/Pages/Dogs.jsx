@@ -8,7 +8,6 @@ function Dogs() {
 
   const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
-  // Fetch dog breeds once when the component mounts
   useEffect(() => {
     const fetchBreeds = async () => {
       try {
@@ -22,7 +21,6 @@ function Dogs() {
     fetchBreeds();
   }, []);
 
-  // Fetch images when form is submitted
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!selectedBreed || numImages <= 0) return;
@@ -47,9 +45,10 @@ function Dogs() {
   return (
     <div className="Dogs">
       <p>
-        Use this page to look up many different pictures from a variety of dog
+        Use this page to look up different pictures from a variety of dog
         breeds.
       </p>
+
       <div className="breedSection">
         <form onSubmit={handleSubmit} className="formSection">
           <label htmlFor="breedSelect">Select a breed:</label>
@@ -78,7 +77,7 @@ function Dogs() {
           <button type="submit">Generate</button>
         </form>
 
-        <div className="breed">{selectedBreed && <h2>{selectedBreed}</h2>}</div>
+        {selectedBreed && <h2>{selectedBreed}</h2>}
 
         <div id="imageGallery" className="image-gallery">
           {images.map((url, index) => (
