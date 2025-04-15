@@ -1,5 +1,9 @@
 import React from "react";
 import AdventureGame from "../Images/AdventureGame.png";
+import DogImg from "../Images/Dog2.png";
+import CalcImg from "../Images/Calc.png";
+import MapImg from "../Images/Map.png";
+import { Routes, Route, Link } from "react-router-dom";
 
 function Projects() {
   return (
@@ -22,41 +26,36 @@ function Projects() {
           </p>
         </div>
       </a>
-
-      <a href="../Pages/LanguageMap/Map.html">
-        <div className="list" id="dogs">
+      {/* <Link to="/projects/languagemap">
+        <div className="list" id="languages">
           <img
-            src="../Images/Map.png"
+            src={MapImg}
             className="img-thumb"
             alt="LanguageMap"
-            id="languageMap"
+            id="language"
           />
           <p className="projects">
             Language Map - An interactive map showing the various languages of
             Europe over history.
           </p>
         </div>
-      </a>
+      </Link> */}
 
-      <a href="../Pages/Calculator/Calculator.html">
-        <div className="list">
-          <img
-            src="../Images/Calc.png"
-            className="img-thumb"
-            alt="Calculator"
-          />
+      <Link to="/projects/calculator">
+        <div className="list" id="dogs">
+          <img src={CalcImg} className="img-thumb" alt="Calculator" id="calc" />
           <p className="projects">
             Calculator - A functional calculator with addition, subtraction,
             multiplication, division, equals, percent, backspace, and a clear
             option.
           </p>
         </div>
-      </a>
+      </Link>
 
-      <a href="../Pages/Dog/dog.html">
+      <Link to="/projects/dogs">
         <div className="list" id="dogs">
           <img
-            src="../Images/Dog2.png"
+            src={DogImg}
             className="img-thumb"
             alt="Dog Image Gallery"
             id="dog"
@@ -66,7 +65,7 @@ function Projects() {
             matching images.
           </p>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }
