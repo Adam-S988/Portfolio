@@ -1,10 +1,10 @@
 import React from "react";
+import AdventureGame from "../Images/AdventureGame.png";
 
 function Projects() {
   return (
     <div className="list-wrapper">
       <p>A collection of projects I have been working on during my studies.</p>
-
       <a
         href="https://github.com/Adam-S988/AdventureGame"
         target="_blank"
@@ -12,25 +12,7 @@ function Projects() {
       >
         <div className="list" id="dogs">
           <img
-            src="../Images/AdventureGame.png"
-            className="img-thumb"
-            alt="AdventureGame"
-            id="adventureGame"
-          />
-          <p className="projects">
-            Adventure Game - An old-school text-based Adventure Game.
-          </p>
-        </div>
-      </a>
-
-      <a
-        href="https://github.com/Adam-S988/AdventureGame"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="list" id="dogs">
-          <img
-            src="../Images/AdventureGame.png"
+            src={AdventureGame}
             className="img-thumb"
             alt="AdventureGame"
             id="adventureGame"
@@ -71,20 +53,6 @@ function Projects() {
         </div>
       </a>
 
-      <a href="../Pages/RPS/Rps.html">
-        <div className="list">
-          <img
-            src="../Images/RPS2.png"
-            className="img-thumb"
-            alt="Rocks, Paper, Scissors"
-            id="rps"
-          />
-          <p className="projects">
-            Rocks, Paper, Scissors - A fun game to play against the computer.
-          </p>
-        </div>
-      </a>
-
       <a href="../Pages/Dog/dog.html">
         <div className="list" id="dogs">
           <img
@@ -96,20 +64,6 @@ function Projects() {
           <p className="projects">
             Dog Image Gallery - Uses an API to select a dog breed and load
             matching images.
-          </p>
-        </div>
-      </a>
-
-      <a href="../Pages/Pong/Pong.html">
-        <div className="list" id="pong">
-          <img
-            src="../Images/Pong.png"
-            className="img-thumb"
-            alt="Pong"
-            id="pong"
-          />
-          <p className="projects">
-            Pong - Play a simple game using the 'W' and 'S' keys.
           </p>
         </div>
       </a>

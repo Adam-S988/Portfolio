@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
+    <div className="footer">
       <a
         href="https://www.linkedin.com/in/adam-stevenson-73754b2a9"
         target="_blank"

@@ -4,8 +4,7 @@ function Main() {
   return (
     <div className="App">
       <h1>Adam Stevenson.</h1>
-      <h2>A Coding Portfolio</h2>
-      <hr />
+      <h2>A coding portfolio</h2>
       <p>
         I am currently a student learning about software development. Here is
         where I will be showcasing various projects I have been working on

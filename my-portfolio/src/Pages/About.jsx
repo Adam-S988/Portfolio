@@ -1,10 +1,12 @@
 import React from "react";
+import AdamPic from "../Images/Adam.jpg";
 
 function About() {
   return (
     <div>
+      <h1 class="aboutTitle">Hello, I'm Adam!</h1>
       <p className="about">
-        <img src="../Images/Adam.jpg" id="aboutPic" alt="Adam" />
+        <img src={AdamPic} id="aboutPic" alt="Adam" />
         I'm a software development student at Keyin College in St. John's,
         Newfoundland. This site showcases some of the projects I've built so
         far. Some of these programs are from school projects while others are
