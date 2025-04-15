@@ -3,9 +3,9 @@ import AdamPic from "../Images/Adam.jpg";
 
 function About() {
   return (
-    <div>
+    <div className="AboutPage">
       <h1 class="aboutTitle">Hello, I'm Adam!</h1>
-      <p className="about">
+      <p className="about-text">
         <img src={AdamPic} id="aboutPic" alt="Adam" />
         I'm a software development student at Keyin College in St. John's,
         Newfoundland. This site showcases some of the projects I've built so
