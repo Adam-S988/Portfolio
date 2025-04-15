@@ -1,6 +1,7 @@
 import React from "react";
 
 function Main() {
+  console.log("Main component rendering");
   return (
     <div className="App">
       <h1>Adam Stevenson.</h1>

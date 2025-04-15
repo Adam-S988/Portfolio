@@ -10,15 +10,19 @@ import Calculator from "./Pages/Calculator";
 
 function App() {
   return (
-    <div>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <Header />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/dogs" element={<Dogs />} />
-        <Route path="/projects/calculator" element={<Calculator />} />
-      </Routes>
+      <div style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/dogs" element={<Dogs />} />
+          <Route path="/projects/calculator" element={<Calculator />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );
