@@ -1,6 +1,25 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import "../App.css";
 
 function Footer() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.body.className = savedTheme;
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.body.className = newTheme;
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
     <div className="footer">
       <a
@@ -18,6 +37,9 @@ function Footer() {
           alt="Github"
         />
       </a>
+      <button className="DarkMode" onClick={toggleTheme}>
+        <p>{theme === "light" ? "🌔" : "☀️"}</p>
+      </button>
     </div>
   );
 }
