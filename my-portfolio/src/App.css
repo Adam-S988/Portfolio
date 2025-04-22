@@ -24,6 +24,7 @@ body.light {
   --list-border-color: #000;
   --nav-color: rgb(40, 70, 70) !important;
   --nav-hover-color: #5f6fca8e;
+  --dog-button-color: #5f6fca8e;
 }
 
 body.dark {
@@ -37,6 +38,7 @@ body.dark {
   --list-border-color: #ddd;
   --nav-color: rgb(194, 230, 230) !important;
   --nav-hover-color: #0a209a8e;
+  --dog-button-color: #8e909cbd;
 }
 
 /* Headings */
@@ -371,10 +373,71 @@ a {
   gap: 10px;
 }
 
-#imageGallery {
+.DogButton {
+  height: 40px;
+  background-color: var(--dog-button-color);
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
+.DogButton p {
+  margin: 0;
+}
+
+.dogText {
+  width: 250px;
+  font-size: 16px;
+}
+
+.dogs {
+  max-width: 250px;
+  height: 250px;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 15px;
+  transition: 1s;
+}
+
+.dogs:hover {
+  max-width: 400px;
+  height: 400px;
+  margin: 5px;
+  transition: 1s;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  justify-items: center;
+  padding-bottom: 100px;
+}
+
+select#breedSelect {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid var(--comp-color);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--text-color);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select#breedSelect:hover {
+  border-color: var(--nav-hover-color);
+}
+
+select#breedSelect:focus {
+  border-color: var(--nav-hover-color);
+  box-shadow: 0 0 5px var(--nav-hover-color);
+}
+
 @media only screen and (max-width: 600px) {
   #aboutPic {
     width: 150px;

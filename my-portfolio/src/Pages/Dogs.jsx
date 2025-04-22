@@ -51,7 +51,9 @@ function Dogs() {
 
       <div className="breedSection">
         <form onSubmit={handleSubmit} className="formSection">
-          <label htmlFor="breedSelect">Select a breed:</label>
+          <label htmlFor="breedSelect">
+            <p className="dogText">Select a breed:</p>
+          </label>
           <select
             id="breedSelect"
             value={selectedBreed}
@@ -65,7 +67,9 @@ function Dogs() {
             ))}
           </select>
 
-          <label htmlFor="numImages">Number of Images:</label>
+          <label htmlFor="numImages">
+            <p className="dogText">Number of Images:</p>
+          </label>
           <input
             type="number"
             id="numImages"
@@ -74,15 +78,24 @@ function Dogs() {
             value={numImages}
             onChange={(e) => setNumImages(e.target.value)}
           />
-          <button type="submit">Generate</button>
+          <button className="DogButton" type="submit">
+            <p>Generate</p>
+          </button>
         </form>
+        <br />
 
         {selectedBreed && <h2>{selectedBreed}</h2>}
 
         <div id="imageGallery" className="image-gallery">
           {images.map((url, index) => (
-            <img key={index} src={url} alt={`Dog breed ${selectedBreed}`} />
+            <img
+              className="dogs"
+              key={index}
+              src={url}
+              alt={`Dog breed ${selectedBreed}`}
+            />
           ))}
+          <br />
         </div>
       </div>
     </div>
