@@ -38,7 +38,7 @@ function Footer() {
         />
       </a>
       <button className="DarkMode" onClick={toggleTheme}>
-        <p>{theme === "light" ? "🌔" : "☀️"}</p>
+        <p>{theme === "light" ? "🌙" : "☀️"}</p>
       </button>
     </div>
   );
