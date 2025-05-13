@@ -22,7 +22,8 @@ function Projects() {
             id="adventureGame"
           />
           <p className="projects">
-            Adventure Game - An old-school text-based Adventure Game.
+            Adventure Game - An old-school text-based Adventure Game. <br />
+            <small>This brings you to the Adventure Game repo on GitHub.</small>
           </p>
         </div>
       </a>
