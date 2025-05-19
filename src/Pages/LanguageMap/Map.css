@@ -107,11 +107,28 @@ footer img {
   height: 24px;
 }
 
-#controls {
-  margin: 20px;
-  text-align: center;
+#controls button {
+  font-size: 14px;
+  height: 25px;
+  padding: 6px 12px;
+  margin: 10px 5px;
+  background-color: #2e86de;
   color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+#controls button:hover {
+  background-color: #1e5fad;
+  transform: scale(1.05);
+}
+
+#controls button:active {
+  transform: scale(0.98);
+}
+
 
 #timeSlider {
   width: 80%;
@@ -119,12 +136,15 @@ footer img {
 
 #map {
   width: 90%;
-  height: 80vh;
+  aspect-ratio: 16 / 9; /* maintains a nice rectangle */
+  max-height: 500px;
   margin: 0 auto;
   border: 1px solid #000000;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
+
 
 #controls {
   margin: 20px;
@@ -193,9 +213,9 @@ footer img {
 
 /* Map Styling */
 #map {
-  flex-grow: 1;
-  height: 500px;
-  border: 1px solid black;
+  z-index: 0;
+  position: relative;
+  border: 2px solid black;
 }
 
 #languageDetails strong {
@@ -242,40 +262,50 @@ footer img {
 /* Individual Language Colors */
 #legend #Celtic {
   color: green;
+  height: 40px;
 }
 
 #legend #Germanic {
   color: red;
+    height: 40px;
 }
 
 #legend #Italic {
   color: blue;
+    height: 40px;
 }
 
 #legend #Baltic {
   color: orange;
+    height: 40px;
 }
 
 #legend #Slavic {
   color: yellow;
+    height: 40px;
 }
 
 #legend #Anatolian {
   color: brown;
+    height: 40px;
 }
 
 #legend #Hellenic {
   color: teal;
+    height: 40px;
 }
 
 #legend #Uralic {
   color: turquoise;
+    height: 40px;
 }
 
 #legend #PaleoEuropean {
   color: grey;
+    height: 40px;
 }
 
 #legend #Lusitanian {
   color: purple;
+    height: 40px;
 }

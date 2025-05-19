@@ -4,6 +4,8 @@ import DogImg from "../Images/Dog2.png";
 import CalcImg from "../Images/Calc.png";
 import MapImg from "../Images/Map.png";
 import { Routes, Route, Link } from "react-router-dom";
+import 'leaflet/dist/leaflet.css';
+
 
 function Projects() {
   return (
@@ -27,7 +29,8 @@ function Projects() {
           </p>
         </div>
       </a>
-      {/* <Link to="/projects/languagemap">
+
+      <Link to="/projects/languagemap">
         <div className="list" id="languages">
           <img
             src={MapImg}
@@ -40,7 +43,7 @@ function Projects() {
             Europe over history.
           </p>
         </div>
-      </Link> */}
+      </Link>
 
       <Link to="/projects/calculator">
         <div className="list" id="dogs">
