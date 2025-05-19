@@ -1,14 +1,13 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 function Header() {
-  console.log("App component rendering");
   return (
     <div className="nav-bar">
       <Link to="/">Home</Link>
-      <Link to="/About">About</Link>
-      <Link to="/Projects">Projects</Link>
+      <Link to="/projects">Projects</Link>
+      <a href="/Portfolio/Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
     </div>
   );
 }
