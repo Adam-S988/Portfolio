@@ -1,10 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import MapMarkers from "./MapMarker";
+import {
+  MapContainer,
+  TileLayer,
+  useMap,
+} from "react-leaflet";
+import L from "leaflet";
+import MapMarkers from "./MapMarker"; // Make sure this is correctly imported
 import "./LanguageMap/Map.css";
 import "leaflet/dist/leaflet.css";
 
-// Utility to fix map sizing issues
+// Utility component to fix map resizing issues
 function MapFixer() {
   const map = useMap();
 
@@ -17,9 +22,9 @@ function MapFixer() {
   return null;
 }
 
-const LanguageMap = () => {
-  const [selectedYear, setSelectedYear] = useState("2500BC");
+const years = ["2500BC", "2000BC", "1500BC", "1000BC", "800BC", "600BC", "400BC","200BC", "1AD", "100AD", "200AD", "300AD", "400AD", "500AD", "600AD", "700AD", "800AD"];
 
+const LanguageMap = () => {
   const languageFamilies = [
     "Celtic",
     "Germanic",
@@ -33,31 +38,32 @@ const LanguageMap = () => {
     "PaleoEuropean",
   ];
 
-  const handleSliderChange = (e) => {
-const yearMap = {
-  1: "2500BC",
-  2: "2000BC",
-  3: "1500BC",
-  4: "1000BC",
-  5: "800BC",
-  6: "600BC",
-  7: "400BC",
-  8: "200BC",
-  9: "1AD",
-  10: "100AD",
-  11: "200AD",
-  12: "300AD",
-  13: "400AD",
-  14: "500AD",
-  15: "600AD",
-  16: "700AD",
-  17: "800AD",
-};
+  const [yearIndex, setYearIndex] = useState(0);
+  const [playing, setPlaying] = useState(false);
+  const intervalRef = useRef(null);
 
-    const newYear = yearMap[e.target.value];
-    setSelectedYear(newYear);
-    document.getElementById("yearLabel").innerText = newYear;
-  };
+  useEffect(() => {
+    if (playing) {
+      intervalRef.current = setInterval(() => {
+        setYearIndex((prevIndex) => {
+          const nextIndex = prevIndex + 1;
+          if (nextIndex < years.length) {
+            return nextIndex;
+          } else {
+            clearInterval(intervalRef.current);
+            setPlaying(false);
+            return prevIndex;
+          }
+        });
+      }, 1500);
+    } else {
+      clearInterval(intervalRef.current);
+    }
+
+    return () => clearInterval(intervalRef.current);
+  }, [playing]);
+
+  const currentYear = years[yearIndex];
 
   return (
     <>
@@ -86,25 +92,30 @@ const yearMap = {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution="&copy; OpenStreetMap contributors"
             />
-            <MapMarkers year={selectedYear} />
+            <MapMarkers year={currentYear} />
           </MapContainer>
         </div>
       </div>
 
       <div id="controls">
         <label htmlFor="timeSlider">
-          Year: <span id="yearLabel">2500BC</span>
+          Year: <span id="yearLabel">{currentYear}</span>
         </label>
         <input
           type="range"
           id="timeSlider"
-          min="1"
-          max="15"
-          defaultValue="1"
+          min="0"
+          max={years.length - 1}
+          value={yearIndex}
           step="1"
-          onChange={handleSliderChange}
+          onChange={(e) => setYearIndex(parseInt(e.target.value))}
         />
-        <button id="playButton">Play</button>
+        <button id="playButton" onClick={() => setPlaying(!playing)}>
+          {playing ? "Pause" : "Play"}
+        </button>
+        <button onClick={() => { setYearIndex(0); setPlaying(false); }}>
+          Reset
+        </button>
       </div>
 
       <div id="languageDetails" className="shared-box">
