@@ -7,6 +7,8 @@ import Projects from "./Pages/Projects";
 import Dogs from "./Pages/Dogs";
 import { Routes, Route } from "react-router-dom";
 import Calculator from "./Pages/Calculator";
+import LanguageMap from "./Pages/Map";
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/dogs" element={<Dogs />} />
           <Route path="/projects/calculator" element={<Calculator />} />
+          <Route path="/projects/languagemap" element={<LanguageMap />} />
         </Routes>
       </div>
       <Footer />

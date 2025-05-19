@@ -193,9 +193,9 @@ footer img {
 
 /* Map Styling */
 #map {
-  flex-grow: 1;
-  height: 500px;
-  border: 1px solid black;
+  z-index: 0;
+  position: relative;
+  border: 2px solid black;
 }
 
 #languageDetails strong {
