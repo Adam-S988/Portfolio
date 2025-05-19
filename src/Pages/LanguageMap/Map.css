@@ -242,40 +242,50 @@ footer img {
 /* Individual Language Colors */
 #legend #Celtic {
   color: green;
+  height: 40px;
 }
 
 #legend #Germanic {
   color: red;
+    height: 40px;
 }
 
 #legend #Italic {
   color: blue;
+    height: 40px;
 }
 
 #legend #Baltic {
   color: orange;
+    height: 40px;
 }
 
 #legend #Slavic {
   color: yellow;
+    height: 40px;
 }
 
 #legend #Anatolian {
   color: brown;
+    height: 40px;
 }
 
 #legend #Hellenic {
   color: teal;
+    height: 40px;
 }
 
 #legend #Uralic {
   color: turquoise;
+    height: 40px;
 }
 
 #legend #PaleoEuropean {
   color: grey;
+    height: 40px;
 }
 
 #legend #Lusitanian {
   color: purple;
+    height: 40px;
 }

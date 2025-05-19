@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import L from 'leaflet';
 import "./LanguageMap/Map.css";
 import "leaflet/dist/leaflet.css";
 
